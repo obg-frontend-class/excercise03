@@ -1,0 +1,347 @@
+$bgColorMain: aliceblue;
+$bgColorHeaderFooter: #434343;
+$bgColorSideBar: #c6c6c6;
+$bgColorAcccent: #434343;
+$bgColorSectionTitle: #b0824a;
+$bgColorButton1: #a29450;
+$bgColorButton2: #ea68a2;
+
+$fontSizeSectionTitle: 1.5em;
+$fontSizeSectionInfo: 1.3em;
+$fontSizeButtonText: 1.5em;
+
+$fontColorSectionTitle: #ffffff;
+$fontColorButtonText: #ffffff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    background-color: $bgColorMain;
+}
+
+header,
+footer {
+    background-color: $bgColorHeaderFooter;
+    padding: 20px 0;
+}
+
+p {
+    color: #575757;
+}
+
+button {
+    outline: none;
+    border: none;
+    font-size: $fontSizeButtonText;
+    color: $fontColorButtonText;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.section-title {
+    font-size: $fontSizeSectionTitle;
+    color: $fontColorSectionTitle;
+    padding: 0 0.5em;
+    height: 60px;
+    line-height: 60px;
+
+    &~p {
+        font-size: $fontSizeSectionInfo;
+        letter-spacing: 0.5px;
+        padding: 1em 0 1em 1em;
+    }
+}
+
+.logo-img {
+    width: 120px;
+
+    &.header {
+        margin-left: 5em;
+    }
+
+    &.footer {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.outer-wrapper {
+    width: 100%;
+    // min-height: 100vh;
+    background-color: $bgColorMain;
+    
+    & .global-menu {
+        position: relative;
+
+        & ul{
+            &.flex {
+                display: flex;                
+            }
+            &.center {
+                justify-content: center;
+                align-items: center;
+            }
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 90px;
+            list-style: none;
+            background-color: rgba(255, 255, 255, 0.3);
+            
+            & li {
+                margin: 0 2em;
+                position: relative;
+                font-size: 1.8em;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 30px;
+                    height: 2px;
+                    background-color: #000;
+                }
+            }
+        }
+    }
+
+    & .main-visual {
+        width: 100%;
+        min-height: 80vh;
+        background-color: pink;
+    }
+
+    & .main-contents-wrapper {
+        display: flex;
+
+        width: 100%;
+        min-height: 100vh;
+
+        & .side-contents {
+            background-color: $bgColorSideBar;
+            padding: 1em;
+            height: inherit;
+
+            & .side-cards {
+                position: sticky;
+                top: 50px;
+
+                & .card-item {
+                    background-color: #eee8aa;
+                    margin-bottom: 1.5em;
+    
+                    & .side-card-img {
+                        width: 200px;
+                        height: 200px;
+                        background-color: orange;
+                    }
+    
+                    & .card-title {
+                        font-size: 1em;
+                    }
+    
+                    & .card-text {
+                        font-size: 0.8em;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+        & .main-contents {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            & section {
+                margin-bottom: 120px;
+            }
+
+            & .photos-wrapper {
+                display: flex;
+                width: 60%;
+                background-color: white;
+                margin: 100px auto; 
+
+                & .photo_1 {
+                    width: 40%;
+                    height: 500px;
+                    border: solid;
+                }
+
+                & .photo-flame {
+                    display: block;
+                    width: 60%;
+                    border: solid;
+
+                    & .photo_2 {
+                        width: 100%;
+                        height: 50%;
+                    }
+
+                    & .inner-flame {
+                        display: flex;
+                        height: 50%;
+
+                        & .photo_3 {
+                            width: 50%;
+                            border: solid;
+                        }
+                        
+                        & .photo_4 {
+                            width: 50%;
+                            border: solid;
+                        }
+                    }
+                }
+            }
+
+            & .video-wrapper {
+                padding: 0 80px;
+                & iframe {
+                    display: block;
+                    margin: auto;
+                }
+            }
+
+            & .news-wrapper {
+                background-color: $bgColorAcccent;
+                width: 100%;
+                height: 400px;
+
+                & .news-inner-wrapper {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    height: inherit;
+                    padding: 2em 0;
+                    color: #fff;
+
+                    & h2 {
+                        font-size: 2em;
+                        letter-spacing: 1px;
+                        margin: 0 100px;
+                    }
+
+                    & .separate-line {
+                        width: 2px;
+                        height: 100%;
+                        background-color: #fff;
+                    }
+
+                    & .news-info {
+                        position: relative;
+                        margin-left: 5em;
+
+                        & ul li{
+                            font-size: 1.5em;
+                            margin: 20px 0;
+                        }
+                    } 
+                }
+            }
+
+            & .recommend-wrapper {
+                display: flex;
+                padding: 0 80px;
+
+                & .recommend-img {
+                    width: 400px;
+                    height: 400px;
+                    background-color: rgb(57, 173, 105)
+                }
+
+                & .recommend-inner-wrapper {
+                    display: block;
+                    width: 500px;
+                    margin-left: 50px;
+                    padding: 0.7em 0;
+                    
+                    & .flag-style {
+                        position: relative;
+                        background-color: $bgColorSectionTitle;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 30px;
+                            top: 0;
+                            right: 0;
+                            border-right: solid 30px $bgColorMain;
+                            // border-left: solid 30px black;
+                            border-top: solid 30px transparent;
+                            border-bottom: solid 30px transparent;
+                        }
+                    }
+
+                    & .buttons-area {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 200px;
+                        & button {
+                            padding: 0.25em 1.25em;
+                            background-color: $bgColorButton1;
+                            filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5))
+                        }
+                    }
+
+                    
+                }
+            }
+
+            & .mercaso-wrapper {
+                background-color: $bgColorAcccent;
+                width: 100%;
+                padding-bottom: 100px;
+
+                & .mercaso-cards {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 65%;
+                    margin: 0 auto;
+                    padding: 50px 0;
+
+                    & .card-item {
+                        background-color: #fff;
+                        & .mercaso-img {
+                            width: 300px;
+                            height: 350px;
+                            background-color: rosybrown
+                        }
+
+                        & .description {
+                            font-size: $fontSizeSectionInfo;
+                            margin-bottom: 1em;
+                            padding: 0.5em;
+                        }
+                    }
+                }
+                
+                & button {
+                    display: block;
+                    width: 500px;
+                    padding: 1em;
+                    margin: 0 auto;
+                    border-radius: 50px;
+
+                    &.mercaso-style {
+                        background-color: $bgColorButton2;
+                        border: solid #ffffff;
+                    }
+                }
+            }
+        }
+    }
+
+    
+    
+}

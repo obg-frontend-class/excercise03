@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  background-color: aliceblue;
+}
+
+header,
+footer {
+  background-color: #434343;
+  padding: 20px 0;
+}
+
+p {
+  color: #575757;
+}
+
+button {
+  outline: none;
+  border: none;
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.section-title {
+  font-size: 1.5em;
+  color: #ffffff;
+  padding: 0 0.5em;
+  height: 60px;
+  line-height: 60px;
+}
+
+.section-title ~ p {
+  font-size: 1.3em;
+  letter-spacing: 0.5px;
+  padding: 1em 0 1em 1em;
+}
+
+.logo-img {
+  width: 120px;
+}
+
+.logo-img.header {
+  margin-left: 5em;
+}
+
+.logo-img.footer {
+  display: block;
+  margin: 0 auto;
+}
+
+.outer-wrapper {
+  width: 100%;
+  background-color: aliceblue;
+}
+
+.outer-wrapper .global-menu {
+  position: relative;
+}
+
+.outer-wrapper .global-menu ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  list-style: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.outer-wrapper .global-menu ul.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.outer-wrapper .global-menu ul.center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.outer-wrapper .global-menu ul li {
+  margin: 0 2em;
+  position: relative;
+  font-size: 1.8em;
+}
+
+.outer-wrapper .global-menu ul li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #000;
+}
+
+.outer-wrapper .main-visual {
+  width: 100%;
+  min-height: 80vh;
+  background-color: pink;
+}
+
+.outer-wrapper .main-contents-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.outer-wrapper .main-contents-wrapper .side-contents {
+  background-color: #c6c6c6;
+  padding: 1em;
+  height: inherit;
+}
+
+.outer-wrapper .main-contents-wrapper .side-contents .side-cards {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
+}
+
+.outer-wrapper .main-contents-wrapper .side-contents .side-cards .card-item {
+  background-color: #eee8aa;
+  margin-bottom: 1.5em;
+}
+
+.outer-wrapper .main-contents-wrapper .side-contents .side-cards .card-item .side-card-img {
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+}
+
+.outer-wrapper .main-contents-wrapper .side-contents .side-cards .card-item .card-title {
+  font-size: 1em;
+}
+
+.outer-wrapper .main-contents-wrapper .side-contents .side-cards .card-item .card-text {
+  font-size: 0.8em;
+  text-align: right;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents section {
+  margin-bottom: 120px;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .photos-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  background-color: white;
+  margin: 100px auto;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .photos-wrapper .photo_1 {
+  width: 40%;
+  height: 500px;
+  border: solid;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .photos-wrapper .photo-flame {
+  display: block;
+  width: 60%;
+  border: solid;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .photos-wrapper .photo-flame .photo_2 {
+  width: 100%;
+  height: 50%;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .photos-wrapper .photo-flame .inner-flame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50%;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .photos-wrapper .photo-flame .inner-flame .photo_3 {
+  width: 50%;
+  border: solid;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .photos-wrapper .photo-flame .inner-flame .photo_4 {
+  width: 50%;
+  border: solid;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .video-wrapper {
+  padding: 0 80px;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .video-wrapper iframe {
+  display: block;
+  margin: auto;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .news-wrapper {
+  background-color: #434343;
+  width: 100%;
+  height: 400px;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .news-wrapper .news-inner-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: inherit;
+  padding: 2em 0;
+  color: #fff;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .news-wrapper .news-inner-wrapper h2 {
+  font-size: 2em;
+  letter-spacing: 1px;
+  margin: 0 100px;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .news-wrapper .news-inner-wrapper .separate-line {
+  width: 2px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .news-wrapper .news-inner-wrapper .news-info {
+  position: relative;
+  margin-left: 5em;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .news-wrapper .news-inner-wrapper .news-info ul li {
+  font-size: 1.5em;
+  margin: 20px 0;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .recommend-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 80px;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .recommend-wrapper .recommend-img {
+  width: 400px;
+  height: 400px;
+  background-color: #39ad69;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .recommend-wrapper .recommend-inner-wrapper {
+  display: block;
+  width: 500px;
+  margin-left: 50px;
+  padding: 0.7em 0;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .recommend-wrapper .recommend-inner-wrapper .flag-style {
+  position: relative;
+  background-color: #b0824a;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .recommend-wrapper .recommend-inner-wrapper .flag-style::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  top: 0;
+  right: 0;
+  border-right: solid 30px aliceblue;
+  border-top: solid 30px transparent;
+  border-bottom: solid 30px transparent;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .recommend-wrapper .recommend-inner-wrapper .buttons-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .recommend-wrapper .recommend-inner-wrapper .buttons-area button {
+  padding: 0.25em 1.25em;
+  background-color: #a29450;
+  -webkit-filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .mercaso-wrapper {
+  background-color: #434343;
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .mercaso-wrapper .mercaso-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 65%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .mercaso-wrapper .mercaso-cards .card-item {
+  background-color: #fff;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .mercaso-wrapper .mercaso-cards .card-item .mercaso-img {
+  width: 300px;
+  height: 350px;
+  background-color: rosybrown;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .mercaso-wrapper .mercaso-cards .card-item .description {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .mercaso-wrapper button {
+  display: block;
+  width: 500px;
+  padding: 1em;
+  margin: 0 auto;
+  border-radius: 50px;
+}
+
+.outer-wrapper .main-contents-wrapper .main-contents .mercaso-wrapper button.mercaso-style {
+  background-color: #ea68a2;
+  border: solid #ffffff;
+}
+/*# sourceMappingURL=style.css.map */
