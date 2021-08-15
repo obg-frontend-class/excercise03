@@ -1,17 +1,5 @@
-$bgColorMain: aliceblue;
-$bgColorHeaderFooter: #434343;
-$bgColorSideBar: #c6c6c6;
-$bgColorAcccent: #434343;
-$bgColorSectionTitle: #b0824a;
-$bgColorButton1: #a29450;
-$bgColorButton2: #ea68a2;
+@import "values";
 
-$fontSizeSectionTitle: 1.5em;
-$fontSizeSectionInfo: 1.3em;
-$fontSizeButtonText: 1.5em;
-
-$fontColorSectionTitle: #ffffff;
-$fontColorButtonText: #ffffff;
 
 * {
     margin: 0;
@@ -22,6 +10,7 @@ $fontColorButtonText: #ffffff;
 body {
     font-size: 15px;
     background-color: $bgColorMain;
+    color: $fontColorMain;
 }
 
 header,
@@ -39,10 +28,44 @@ button {
     border: none;
     font-size: $fontSizeButtonText;
     color: $fontColorButtonText;
-
+    
     &:hover {
         cursor: pointer;
     }
+}
+
+.news-wrapper,
+.gallary-wrapper {
+    background-color: $bgColorAcccent;
+}
+
+.flag-style {
+    position: relative;
+    background-color: $bgColorSectionTitle;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        top: 0;
+        right: 0;
+        border-right: solid 30px $bgColorMain;
+        border-top: solid 30px transparent;
+        border-bottom: solid 30px transparent;
+    }
+}
+
+.buttons-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+}
+
+.action-button {
+    background-color: $bgColorButton1;
+    padding: 0.25em 1.25em;
+    filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5))
 }
 
 .section-title {
@@ -51,7 +74,7 @@ button {
     padding: 0 0.5em;
     height: 60px;
     line-height: 60px;
-
+    
     &~p {
         font-size: $fontSizeSectionInfo;
         letter-spacing: 0.5px;
@@ -59,13 +82,25 @@ button {
     }
 }
 
+.more {
+    position: relative;
+    &::after {
+        font-family: "Font Awesome 5 Free";
+        content: '\f24d';
+        position: absolute;
+        top: 0;
+        right: 5%;
+        transform: translateY(50%);
+    }
+}
+
 .logo-img {
     width: 120px;
-
+    
     &.header {
         margin-left: 5em;
     }
-
+    
     &.footer {
         display: block;
         margin: 0 auto;
@@ -74,12 +109,11 @@ button {
 
 .outer-wrapper {
     width: 100%;
-    // min-height: 100vh;
     background-color: $bgColorMain;
     
     & .global-menu {
         position: relative;
-
+        
         & ul{
             &.flex {
                 display: flex;                
@@ -113,24 +147,24 @@ button {
             }
         }
     }
-
+    
     & .main-visual {
         width: 100%;
         min-height: 80vh;
         background-color: pink;
     }
-
+    
     & .main-contents-wrapper {
         display: flex;
-
+        
         width: 100%;
         min-height: 100vh;
-
+        
         & .side-contents {
             background-color: $bgColorSideBar;
             padding: 1em;
             height: inherit;
-
+            
             & .side-cards {
                 position: sticky;
                 top: 50px;
@@ -138,17 +172,17 @@ button {
                 & .card-item {
                     background-color: #eee8aa;
                     margin-bottom: 1.5em;
-    
+                    
                     & .side-card-img {
                         width: 200px;
                         height: 200px;
                         background-color: orange;
                     }
-    
+                    
                     & .card-title {
                         font-size: 1em;
                     }
-    
+                    
                     & .card-text {
                         font-size: 0.8em;
                         text-align: right;
@@ -160,37 +194,37 @@ button {
             display: block;
             width: 100%;
             height: 100%;
-
+            
             & section {
                 margin-bottom: 120px;
             }
-
+            
             & .photos-wrapper {
                 display: flex;
                 width: 60%;
                 background-color: white;
                 margin: 100px auto; 
-
+                
                 & .photo_1 {
                     width: 40%;
                     height: 500px;
                     border: solid;
                 }
-
+                
                 & .photo-flame {
                     display: block;
                     width: 60%;
                     border: solid;
-
+                    
                     & .photo_2 {
                         width: 100%;
                         height: 50%;
                     }
-
+                    
                     & .inner-flame {
                         display: flex;
                         height: 50%;
-
+                        
                         & .photo_3 {
                             width: 50%;
                             border: solid;
@@ -211,9 +245,8 @@ button {
                     margin: auto;
                 }
             }
-
+            
             & .news-wrapper {
-                background-color: $bgColorAcccent;
                 width: 100%;
                 height: 400px;
 
@@ -224,23 +257,23 @@ button {
                     height: inherit;
                     padding: 2em 0;
                     color: #fff;
-
+                    
                     & h2 {
                         font-size: 2em;
                         letter-spacing: 1px;
                         margin: 0 100px;
                     }
-
+                    
                     & .separate-line {
                         width: 2px;
                         height: 100%;
                         background-color: #fff;
                     }
-
+                    
                     & .news-info {
                         position: relative;
                         margin-left: 5em;
-
+                        
                         & ul li{
                             font-size: 1.5em;
                             margin: 20px 0;
@@ -248,7 +281,7 @@ button {
                     } 
                 }
             }
-
+            
             & .recommend-wrapper {
                 display: flex;
                 padding: 0 80px;
@@ -256,7 +289,7 @@ button {
                 & .recommend-img {
                     width: 400px;
                     height: 400px;
-                    background-color: rgb(57, 173, 105)
+                    background-color: rgb(57, 173, 105);
                 }
 
                 & .recommend-inner-wrapper {
@@ -264,52 +297,21 @@ button {
                     width: 500px;
                     margin-left: 50px;
                     padding: 0.7em 0;
-                    
-                    & .flag-style {
-                        position: relative;
-                        background-color: $bgColorSectionTitle;
-
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            width: 30px;
-                            top: 0;
-                            right: 0;
-                            border-right: solid 30px $bgColorMain;
-                            // border-left: solid 30px black;
-                            border-top: solid 30px transparent;
-                            border-bottom: solid 30px transparent;
-                        }
-                    }
-
-                    & .buttons-area {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        height: 200px;
-                        & button {
-                            padding: 0.25em 1.25em;
-                            background-color: $bgColorButton1;
-                            filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5))
-                        }
-                    }
-
-                    
                 }
             }
-
+            
             & .mercaso-wrapper {
                 background-color: $bgColorAcccent;
                 width: 100%;
                 padding-bottom: 100px;
-
+                
                 & .mercaso-cards {
                     display: flex;
                     justify-content: space-between;
                     width: 65%;
                     margin: 0 auto;
                     padding: 50px 0;
-
+                    
                     & .card-item {
                         background-color: #fff;
                         & .mercaso-img {
@@ -317,7 +319,7 @@ button {
                             height: 350px;
                             background-color: rosybrown
                         }
-
+                        
                         & .description {
                             font-size: $fontSizeSectionInfo;
                             margin-bottom: 1em;
@@ -332,16 +334,33 @@ button {
                     padding: 1em;
                     margin: 0 auto;
                     border-radius: 50px;
-
+                    
                     &.mercaso-style {
                         background-color: $bgColorButton2;
                         border: solid #ffffff;
                     }
                 }
             }
+            
+            & .skys-wrapper {
+                display: flex;
+                padding: 0 80px;
+                & .skys-inner-wrapper {                    
+                    & button {
+                        display: block;
+                        width: 100%;
+                    }
+            }
+                & .skys-img {
+                    width: 400px;
+                    height: 400px;
+                    background-color: darkgray;
+                    margin-left: 50px;
+                }
+            } 
         }
     }
-
+    
     
     
 }

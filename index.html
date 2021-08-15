@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample Site</title>
+    <script src="https://kit.fontawesome.com/573d7ed9f8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -76,8 +77,8 @@
                         <h2 class="section-title flag-style">赤平よいとこ一度はおいで</h2>
                         <p>北海道赤平市は北海道出身者が出演する某人気テレビ番組の影響でここ数年で知名度が急上昇。<br>ドラマのロケ地になるほど、注目を集めています</p>
                         <div class="buttons-area">
-                            <button type="button">もっと知りたい</button>
-                            <button type="button">今すぐ行きます</button>
+                            <button class="action-button" type="button">もっと知りたい</button>
+                            <button class="action-button" type="button">今すぐ行きます</button>
                         </div>
                     </div>
                 </section>
@@ -98,8 +99,27 @@
                     </div>
                     <button class="mercaso-style" type="button">メルカソでお買い物する</button>
                 </section>
-                <section class="skys-wrapper"></section>
-                <section class="gallary-wrapper"></section>
+                <section class="skys-wrapper flex"> <!-- flex -->
+                    <div class="skys-inner-wrapper">
+                        <div class="skys-text-contents">
+                            <h2 class="section-title flag-style">東京の空も悪くない</h2>
+                            <p>
+                                東京は空が狭い。<br>
+                                高いビルが隙間なくたくさん伸びていって、<br>
+                                空全体が見えることなんてほどんとないけど。<br>
+                                たまに高いところから空を見ていると、<br>
+                                意外な発見があったりして、一息つくのもいいと思うよ。
+                            </p>
+                            <div class="buttons-area">
+                                <button class="action-button more" type="button">空の写真をもっとみる</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skys-img">ここに画像が入ります</div>
+                </section> <!-- flex end-->
+                <section class="gallary-wrapper">
+                    
+                </section>
                 <section class="japan-wrapper"></section>
             </main>
         </div>
