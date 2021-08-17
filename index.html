@@ -12,13 +12,19 @@
     <div class="outer-wrapper">
         <header>
             <img class="logo-img header" src="images/sappari-logo-white.png" alt="">
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span>menu</span>
+            </button>
         </header>
         <nav class="global-menu">
             <ul class="flex center">
-                <li class="menu-top">top</li>
-                <li class="menu-about">about</li>
-                <li class="menu-access">access</li>
-                <li class="menu-help">help</li>
+                <li class="menu-top"><a href="#">top</a></li>
+                <li class="menu-about"><a href="#">about</a></li>
+                <li class="menu-access"><a href="#">access</a></li>
+                <li class="menu-help"><a href="#">help</a></li>
             </ul>
         </nav>
         <img class="main-visual" src="./images/main_03.png" alt="">
@@ -50,7 +56,7 @@
                     <img class="photo_4" src="./images/pc_img_04.png" alt="">
                 </section>
                 <section class="video-wrapper">
-                    <iframe width="1000" height="562.5"
+                    <iframe width="950" height="534.4"
                             src="https://www.youtube.com/embed/BL7vYsBo2Y0"
                             title="YouTube video player"
                             frameborder="0"
@@ -77,10 +83,22 @@
                     <img class="recommend-img" src="./images/pc_img_05.png" alt="">
                     <div class="recommend-inner-wrapper">
                         <h2 class="section-title flag-style">赤平よいとこ一度はおいで</h2>
-                        <p>北海道赤平市は北海道出身者が出演する某人気テレビ番組の影響でここ数年で知名度が急上昇。<br>ドラマのロケ地になるほど、注目を集めています</p>
+                        <p>北海道赤平市は北海道出身者が出演する某人気テレビ番組の影響でここ数年で知名度が急上昇。<br>ドラマのロケ地になるほど、注目を集めています。</p>
                         <div class="buttons-area">
                             <button class="action-button drop-shadow" type="button">もっと知りたい</button>
                             <button class="action-button drop-shadow" type="button">今すぐ行きます</button>
+                        </div>
+                        <div class="recommend-mobile-wrapper">
+                            <h2 class="section-title flag-style">赤平よいとこ一度はおいで</h2>
+                            <!-- spのみ表示 ここから-->
+                            <div class="recommend-mobile-inner-wrapper">
+                                <p>北海道赤平市は北海道出身者が出演する某人気テレビ番組の影響でここ数年で知名度が急上昇。<br>ドラマのロケ地になるほど、注目を集めています。</p>
+                                <div class="buttons-area">
+                                    <button class="action-button drop-shadow" type="button">もっと知りたい</button>
+                                    <button class="action-button drop-shadow" type="button">今すぐ行きます</button>
+                                </div>
+                            </div>
+                            <!-- spのみ表示 ここまで-->
                         </div>
                     </div>
                 </section>
@@ -89,14 +107,17 @@
                         <div class="card-item">
                             <img class="mercaso-img" src="./images/IMG_0334.jpeg" alt="">
                             <h3 class="title">マンション買うならいくら？</h3>
+                            <button class="circle-style">欲しい</button>
                         </div>
                         <div class="card-item">
                             <img class="mercaso-img" src="./images/IMG_0643.jpeg" alt="">
                             <h3 class="title">あのとき買えばよかったアレ</h3>
+                            <button class="circle-style">欲しい</button>
                         </div>
                         <div class="card-item">
                             <img class="mercaso-img" src="./images/IMG_1319.jpeg" alt="">
                             <h3 class="title">売る気のないメルカソ特集</h3>
+                            <button class="circle-style">欲しい</button>
                         </div>
                     </div>
                     <button class="goto-mercaso circle-style" type="button">メルカソでお買い物する</button>
@@ -112,15 +133,15 @@
                                 たまに高いところから空を見ていると、<br>
                                 意外な発見があったりして、一息つくのもいいと思うよ。
                             </p>
-                            <div class="buttons-area">
-                                <button class="action-button drop-shadow more-icon" type="button">空の写真をもっとみる</button>
-                            </div>
+                        </div>
+                        <div class="buttons-area">
+                            <button class="action-button drop-shadow modal-icon" type="button">空の写真をもっとみる</button>
                         </div>
                     </div>
                     <img class="skys-img" src="./images/tokyo_sky01.jpg" alt="">
                 </section>
                 <section class="gallery-wrapper">
-                    <div class="gallary-inner-wrapper">
+                    <div class="gallery-inner-wrapper"><!-- flex -->
                         <div class="gallery-card">
                             <img class="gallery-card-img" src="./images/IMG_1319.jpeg" alt="">
                             <h3 class="title">未使用ZIPPO</h3>

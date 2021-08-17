@@ -1,5 +1,5 @@
 // 背景色に関する変数群
-$bgColorMain: aliceblue;
+$bgColorMain: #ffffff;
 $bgColorHeaderFooter: #434343;
 $bgColorSideBar: #c6c6c6;
 $bgColorAcccent: #434343;
@@ -10,11 +10,15 @@ $bgColorButton2: #ea68a2;
 // フォントサイズに関する変数群
 $fontSizeSectionTitle: 1.5em;
 $fontSizeSectionInfo: 1.3em;
-$fontSizeButtonText: 1.5em;
+$fontSizeButtonText: 1.3em;
 
 // 文字色に関する変数群
 $fontColorMain: #575757;
 $fontColorWhite: #ffffff;
 $fontColorSectionTitle: #ffffff;
 $fontColorButtonText: #ffffff;
+
+// 幅・高さに関する変数群
+$sectionWidthFull: 100%;
+$sectionWidth: 950px; 
 

@@ -1,0 +1,159 @@
+/************************************************
+
+stylesheet： 599px以下のタブレットやモニターで適用
+
+************************************************/
+
+
+
+.side-contents {
+    display: none;
+}
+
+.outer-wrapper {
+
+    & .logo-img {
+        margin: 0 auto;
+    }
+
+    & .global-menu {
+        display: none;
+    }
+    
+    & .main-contents-wrapper {
+        & .main-contents {
+            & .photos-wrapper {
+                display: block;
+                width: 300px;
+
+                & .photo_2,
+                & .photo_3,
+                & .photo_4 {
+                    display: none;
+                }
+            }
+
+            & .video-wrapper {
+                & iframe {
+                    width: 100%;
+                    // height: 300px;
+                }
+            }
+
+            & .news-wrapper {
+                width: 100%;
+                height: fit-content;
+
+                & .news-inner-wrapper {
+                    display: block;
+
+                    & h2 {
+                        text-align: center;
+                    }
+
+                    & .separate-line {
+                        width: 60%;
+                        height: 2px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+
+            & .recommend-wrapper {
+                display: block;
+
+                & .recommend-img {
+                    min-width: 95%;
+                    height: 300px;
+                    margin: 0 auto;
+                    object-fit: fill;
+                }
+
+                & .recommend-inner-wrapper {
+                    width: 95%;
+                    margin: 50px auto;
+
+                    & .buttons-area {
+                        justify-content: space-evenly;
+                    }
+
+                    & .recommend-mobile-wrapper {
+                        display: block;
+                        margin-top: 100px;
+                        
+                        & .recommend-mobile-inner-wrapper {
+                            display: flex;
+                            justify-content: center;
+                            margin: 10px auto;
+
+                            & > p {
+                                width: 55%;
+                                font-size: 1.2em;
+                                padding-left: 0.5em;
+                                margin-bottom: 0px;
+                            }
+
+                            & .buttons-area {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                width: 45%;
+
+                                & .action-button {
+                                    margin-bottom: 5px;
+    
+                                    &:last-child {
+                                        margin-bottom: 0px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            & .mercaso-wrapper {
+                padding-bottom: 0px;
+
+                & .mercaso-cards {
+                    display: block;
+
+                    & .card-item {
+                        width: 300px;
+                        margin: 0 auto 100px;
+
+                        & .circle-style {
+                            display: block;
+                            width: 100%;
+                            padding: 0.5em 0;
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+
+                & .goto-mercaso {
+                    display: none;
+                }
+            }
+
+            & .skys-wrapper {
+            }
+            
+            & .gallery-wrapper {
+                & .gallery-inner-wrapper {
+                }
+
+                & .gallery-inner-wrapper {
+                    display: block;
+                }
+            }
+
+            & .japan-wrapper {
+                display: block;
+            }
+        }
+    }
+}
